@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h65-fR-zN1">
+                                <rect key="frame" x="144" y="66" width="108" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sF1-CV-jAP">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL"/>
+                            </textField>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89y-eU-l12">
+                                <rect key="frame" x="0.0" y="135" width="375" height="532"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWG-VY-rXU">
+                                <rect key="frame" x="122" y="86" width="130" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Искать"/>
+                                <connections>
+                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7XX-SU-fME"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ehT-F3-X32">
+                                <rect key="frame" x="133" y="86" width="108" height="50"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egx-gj-iVl">
+                                <rect key="frame" x="323" y="66" width="30" height="61"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oCM-Dm-F1C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqb-At-tRP">
+                                <rect key="frame" x="25" y="66" width="30" height="30"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlq-l1-g2P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="89y-eU-l12" secondAttribute="trailing" id="0eN-PO-egt"/>
+                            <constraint firstItem="89y-eU-l12" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Es-0S-VSV"/>
+                            <constraint firstItem="sF1-CV-jAP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3UL-1S-Kdo"/>
+                            <constraint firstItem="gWG-VY-rXU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="106" id="7WU-fE-8fB"/>
+                            <constraint firstItem="89y-eU-l12" firstAttribute="top" secondItem="ehT-F3-X32" secondAttribute="bottom" constant="24" id="7gA-Tw-jNx"/>
+                            <constraint firstItem="sF1-CV-jAP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BqK-Ed-5HL"/>
+                            <constraint firstItem="89y-eU-l12" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Dnh-Ge-Qeq"/>
+                            <constraint firstItem="gWG-VY-rXU" firstAttribute="top" secondItem="sF1-CV-jAP" secondAttribute="bottom" constant="28" id="EMy-lW-le4"/>
+                            <constraint firstAttribute="trailing" secondItem="egx-gj-iVl" secondAttribute="trailing" constant="22" id="G7O-B3-Y2f"/>
+                            <constraint firstItem="sF1-CV-jAP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OTo-QO-aF1"/>
+                            <constraint firstItem="Nqb-At-tRP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="eyR-gS-Yfz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gWG-VY-rXU" secondAttribute="trailing" constant="107" id="eyo-ge-Wa5"/>
+                            <constraint firstItem="egx-gj-iVl" firstAttribute="top" secondItem="sF1-CV-jAP" secondAttribute="bottom" constant="8" id="ib3-1r-DVP"/>
+                            <constraint firstItem="89y-eU-l12" firstAttribute="top" secondItem="gWG-VY-rXU" secondAttribute="bottom" constant="13" id="mfA-7F-hEO"/>
+                            <constraint firstItem="Nqb-At-tRP" firstAttribute="top" secondItem="sF1-CV-jAP" secondAttribute="bottom" constant="8" id="xcU-Gb-9sw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="sF1-CV-jAP" id="Qut-7e-AWW"/>
+                        <outlet property="webView" destination="89y-eU-l12" id="IOJ-Cc-L8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
